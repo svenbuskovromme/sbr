@@ -1,0 +1,1 @@
+{"operationName":"AddApp","variables":{"input":{"app":{"name":"added through client 2"}}},"query":"mutation AddApp($input: CreateAppInput!) {\n  createApp(input: $input) {\n    app {\n      name\n      id\n      __typename\n    }\n    __typename\n  }\n}\n"}
