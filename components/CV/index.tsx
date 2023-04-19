@@ -170,7 +170,7 @@ const CVCard: FC<PropsWithChildren<{title: ReactElement}>> = ({title, children})
  export const GenericProfile: FC = () => {
     return <div className='generic-card-container'>
       <div>
-      After graduation, I started a startup project with a friend, and taught myself coding in the process. It's on pause, but the experience was
+      After graduation, I started a startup project with a friend, and taught myself coding in the process. It&apos;s on pause, but the experience was
       invaluable.
       </div>
       <div>
@@ -180,8 +180,8 @@ const CVCard: FC<PropsWithChildren<{title: ReactElement}>> = ({title, children})
       </div>
       <div>
       After a year in Jungle (and counting), 
-      I've proven I can build a <b>stable, performant stack</b> of my own to support thousands of daily users with a complex backend and <b>headless CMS</b>. 
-      Product wise, I've become data-driven and pragmatic. 
+      I&apos;ve proven I can build a <b>stable, performant stack</b> of my own to support thousands of daily users with a complex backend and <b>headless CMS</b>. 
+      Product wise, I&apos;ve become data-driven and pragmatic. 
       </div>
     </div>
   }
@@ -189,12 +189,12 @@ const CVCard: FC<PropsWithChildren<{title: ReactElement}>> = ({title, children})
   export const GenericPersonal: FC = () => {
     return <div className='generic-card-container'>
       <div>
-        I'm 33 years old and from Nordjylland.
+        I&apos;m 33 years old and from Nordjylland.
         Friends and family describe me as calm,
         optimistic, empathetic. 
       </div>
       <div>
-        Personally I think I'm easy going, and sitting solidly in the middle of the extro-introverted spectrum
+        Personally I think I&apos;m easy going, and sitting solidly in the middle of the extro-introverted spectrum
       </div>
       <div>
         I picked up boxing when I moved to cph,
