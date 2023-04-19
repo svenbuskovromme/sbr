@@ -43,7 +43,7 @@ const ReactSkills: FC = () => {
           
           `}</style>
       <div className='skills-container'>
-          <Skill name={'fullstack'} amount={'5 years'} />
+          <Skill name={'fullstack'} amount={'6 years'} />
           <Skill name={'react'} amount={'3000+ hours ~ 3 years'} />
           <div className='skills-list-container'>
             <div className='skill-list-item'>React Native</div>
