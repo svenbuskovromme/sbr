@@ -4,14 +4,7 @@ import Image from 'next/image';
 import { FC, ReactNode } from 'react';
 import Link from 'next/link';
 import {paddings, colors} from '../styles/inlines';
-
-const NavButton: FC<{children: ReactNode, href: string}> = ({children, href}) => {
-  return <Link href={href}>
-    <motion.div style={{cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: colors.darkblue, borderRadius: 5, padding: paddings.button}} whileHover={{scale: 1.1}}>
-      {children}
-    </motion.div>
-  </Link>
-}
+import NavButton from '../components/NavButton';
 
 const Home: NextPage = () => {
   return (
