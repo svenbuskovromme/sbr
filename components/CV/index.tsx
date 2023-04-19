@@ -38,10 +38,9 @@ const CVCard: FC<PropsWithChildren<{title: ReactElement}>> = ({title, children})
                 flex-direction: column;
                 width: 800px;
                 aspect-ratio: 1/1.41;
-                gap:120px;
+                gap:100px;
                 padding:60px;
               }
-  
   
               a{
                 text-decoration: underline;

@@ -24,8 +24,9 @@ const CVIndex: NextPage = () => {
   return !!context ? 
       <CVContext.Provider value={context}>
         <div style={{display: 'flex', flexDirection: 'column', gap: 20, flex: 1, height: '100vh', alignItems: 'center', justifyContent: 'center'}}>
-            <div style={{display: 'flex', padding: 20, justifyContent: 'center'}}>
-            <NavButton href='/cv/react'>React</NavButton>
+            <div style={{display: 'flex', gap: 20, padding: 20, justifyContent: 'center'}}>
+              <NavButton href='/cv/general'>General</NavButton>
+              <NavButton href='/cv/react'>React</NavButton>
             </div>
         </div>
       </CVContext.Provider>
