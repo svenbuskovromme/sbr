@@ -1,17 +1,7 @@
 import type { GetServerSideProps, GetStaticProps, NextPage } from 'next'
 import {AnimatePresence, motion} from 'framer-motion';
 // import { GetAppsDocument } from '../generated/types';
-import postgraphile from '../server/postgraphile';
 import { FC, useEffect, useState } from 'react';
-
-import { colors, paddings } from '../styles/inlines';
-import { useMutation, useQuery } from '@apollo/client';
-import { AddAppDocument, AddAppMutation, AddAppMutationFn, AddAppMutationResult, AddAppMutationVariables, DeleteAppByIdInput, DeleteAppDocument, DeleteAppMutation, DeleteAppMutationVariables, GetAppsDocument, GetAppsQuery, GetAppsQueryResult, GetAppsQueryVariables } from '../generated/graphql';
-import { initializeApollo, addApolloState } from '../lib/apolloClient';
-import { unstable_getServerSession } from 'next-auth/next';
-import { getToken } from 'next-auth/jwt';
-import { authOptions } from './api/auth/[...nextauth]';
-import Link from 'next/link';
 import NavButton from '../components/NavButton';
 
 export type AppsParams = {}
