@@ -43,16 +43,21 @@ const ReactSkills: FC = () => {
           
           `}</style>
       <div className='skills-container'>
-          <Skill name={'fullstack'} amount={'6 years'} />
-          <Skill name={'react'} amount={'3000+ hours ~ 3 years'} />
+      <Skill name={'fullstack'} amount={'6 years'} />
           <div className='skills-list-container'>
-            <div className='skill-list-item'>React Native</div>
-            <div className='skill-list-item'>ReactJS</div>
+            <div className='skill-list-item'>React web/native</div>
+            <div className='skill-list-item'>Angular</div>
+            <div className='skill-list-item'>Vue</div>
             <div className='skill-list-item'>NextJS</div>
-            <div className='skill-list-item'>Redux</div>
-            <div className='skill-list-item'>Javascript</div>
-            <div className='skill-list-item'>Typescript</div>
+            <div className='skill-list-item'>NodeJS</div>
+            <div className='skill-list-item'>c#</div>
+            <div className='skill-list-item'>Unity</div>
+            <div className='skill-list-item'>php</div>
+            <div className='skill-list-item'>c</div>
+            <div className='skill-list-item'>c++</div>
+            <div className='skill-list-item'>obj-c</div>
           </div>
+          
       </div>
     </div>
   }
