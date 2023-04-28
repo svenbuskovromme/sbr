@@ -1,6 +1,8 @@
+'use client';
+
 import { NextPage } from "next"
 import { FC } from "react"
-import CV, { GenericHeader, GenericHistory, GenericPersonal, GenericProfile, Skill } from "../../components/CV"
+import CV, { GenericHeader, GenericHistory, GenericPersonal, GenericProfile, Skill } from "../../../components/CV"
 
 const ReactSkills: FC = () => {
     return <div className='skills-container-wrap'>

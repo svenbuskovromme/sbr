@@ -144,7 +144,7 @@ const CVCard: FC<PropsWithChildren<{title: ReactElement}>> = ({title, children})
         }
         `}</style>
       <div style={{position: 'relative', height: 100, width: 100}}>
-        <Image src={'/signature.png'} layout={'fill'} objectFit={'cover'} />
+        <Image alt={"Drawn picture of Sven"} src={'/signature.png'} layout={'fill'} objectFit={'cover'} />
       </div>
       <div className='info-container'>
         <div className='info-item'>Sven Buskov Romme</div>
@@ -153,7 +153,7 @@ const CVCard: FC<PropsWithChildren<{title: ReactElement}>> = ({title, children})
       </div>
       <div className='contact-container'>
         <div>Email</div>
-        <div><a href={'mailto:sven@thejungleapp.com'}>sven@thejungleapp.com</a></div>
+        <div><a href={'mailto:svenromme@hotmail.com'}>svenromme@hotmail.com</a></div>
         <div>Phone</div>
         <div>+4521674110</div>
         <div>Web</div>

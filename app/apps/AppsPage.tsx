@@ -1,8 +1,10 @@
+'use client';
+
 import type { GetServerSideProps, GetStaticProps, NextPage } from 'next'
 import {AnimatePresence, motion} from 'framer-motion';
 // import { GetAppsDocument } from '../generated/types';
 import { FC, useEffect, useState } from 'react';
-import NavButton from '../components/NavButton';
+import NavButton from '../../components/NavButton';
 
 export type AppsParams = {}
 export type App = {
@@ -12,26 +14,7 @@ export type App = {
   appStoreUrl?: string
 }
 
-const Apps: NextPage<AppsParams> = () => {
-  // const { loading, error: cError, data: cData, refetch } = useQuery(GetAppsDocument) as GetAppsQueryResult;
-
-  // const [apps, setApps] = useState<App[]>([]);
-
-  // useEffect(() => {
-  //   console.log('apollo server data', data, error);
-  // }, [data, error]);
-
-  // useEffect(() => {
-  //   console.log('apollo client data', 'loading', loading, cData, cError);
-  //   if(!cError){
-  //     console.log(cData?.allApps?.nodes);
-  //     setApps(cData?.allApps?.nodes as App[] ?? []);
-  //   }
-  //   else{
-  //     console.log(cError);
-  //   }
-  // }, [cData, cError, loading]);
-
+const AppsPage: NextPage<AppsParams> = () => {
   const apps: App[] = [
     {name: 'Jungle', 
     description: 'A product centered around food discovery. \n Find recommendations from culinary professionals',
@@ -61,22 +44,4 @@ const AppView: FC<{index: number, app: App}> = ({index, app}) => {
   </motion.div>
 }
 
-
-// export const getStaticProps: GetStaticProps<AppsParams> = async (ctx) => {
-//   const apolloClient = initializeApollo();
-
-//   const apps = await apolloClient.query<GetAppsQuery, GetAppsQueryVariables>({
-//     query: GetAppsDocument,
-//     variables: {},
-//   });
-
-//   // const session = await unstable_getServerSession();
-//   // const token = await getToken({req: apolloClient.});
-//   // console.log('api top', session, token, req.cookies);
-
-//   return await addApolloState(apolloClient, {
-//     props: {apps: (apps.data.allApps?.nodes ?? []) as App[]},
-//   })
-// }
-
-export default Apps;
+export default AppsPage;
