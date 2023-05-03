@@ -7,43 +7,37 @@ import { FC, useEffect, useState } from 'react';
 import NavButton from '../../components/NavButton';
 import { RouteType } from 'next/dist/lib/load-custom-routes';
 import { UrlObject } from 'url';
+import { Project } from './types';
+import { projects } from './data';
+import Link from 'next/link';
 
 export type AppsParams = {}
-export type App = {
-  name: string,
-  description: string,
-  webUrl?: string,
-  appStoreUrl?: string
-}
 
 const ProjectsPage: NextPage<AppsParams> = () => {
-  const apps: App[] = [
-    {name: 'Jungle', 
-    description: 'A product centered around food discovery. \n Find recommendations from culinary professionals',
-    appStoreUrl: 'https://apps.apple.com/dk/app/apple-store/id1574546669', webUrl: 'https://jungleapp.co'},
-  ];
-
   return (
-    <motion.div 
-    initial={{opacity: 0, y: 20}} 
-    animate={{opacity: 1, y: 0}} 
-    style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', height: '100vh'}}>
-        <motion.div style={{display: 'flex', gap: 20}}>
-            {apps.map((app, index) => <AppView key={app.name} app={app} index={index} />)}
-        </motion.div>
-    </motion.div>
+    <>
+    <div style={{padding: 30, width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column'}}>
+      <h1>Projects</h1>
+      <motion.div 
+        initial={{opacity: 0, y: 20}} 
+        animate={{opacity: 1, y: 0}} 
+        style={{flex: 1, overflowY: 'auto', gap: 30, gridAutoFlow: 'row', display: 'grid', gridTemplateColumns: 'repeat( auto-fill, minmax(250px, 1fr) )', justifyContent: 'center', alignItems: 'flex-start', width: '100%'}}>
+        {
+          projects.map(project => <ProjectGridView key={project.title} project={project} />)
+        }
+      </motion.div>
+    </div>
+    </>
   )
 }
 
-const AppView: FC<{index: number, app: App}> = ({index, app}) => {
-  return <motion.div initial={{opacity: 0, scale: 0.5}} animate={{opacity: 1, scale: 1}} transition={{delay: index * 0.1, duration: 0.5}} style={{color:'white', display: 'flex', alignItems: 'center', flexDirection: 'column', gap: 10}}>
-    <div style={{fontSize: 22, fontWeight: '600'}}>{app.name}</div>
-    <div style={{whiteSpace: 'pre-line', textAlign: 'center', lineHeight: 1.3}}>{app.description}</div>
-    <div style={{display: 'flex', gap: 10}}>
-      {!!app.webUrl && <NavButton href={{href: app.webUrl}}>web</NavButton>}
-      {!!app.appStoreUrl && <NavButton href={{href: app.appStoreUrl}}>native</NavButton>}
+const ProjectGridView: FC<{project: Project}> = ({project}) => {
+  return <NavButton href={`/projects/${project.title.toLowerCase()}`}>
+    <div style={{display: 'flex', flexDirection: 'column', gap: 15, padding: 10}}>
+      <div>{project.title}</div>
+      <div style={{fontSize: 14, fontWeight: '300', lineHeight: 1.5}}>{project.description}</div>
     </div>
-  </motion.div>
+  </NavButton>
 }
 
 export default ProjectsPage;
