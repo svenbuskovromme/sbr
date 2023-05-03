@@ -26,7 +26,7 @@ const ProjectDetails: FC<{project: Project}> = ({project}) => {
         <div style={{display: 'flex', flexDirection: 'column', gap: 15}}>
           <div>Apps / Products</div>
           <div 
-            style={{overflowY: 'auto', gap: 30, gridAutoFlow: 'row', display: 'grid', gridTemplateColumns: 'repeat( auto-fill, minmax(250px, 1fr) )', justifyContent: 'center', alignItems: 'flex-start', width: '100vw', height: '100vh'}}>
+            style={{overflowY: 'auto', gap: 30, gridAutoFlow: 'row', display: 'grid', gridTemplateColumns: 'repeat( auto-fill, minmax(250px, 1fr) )', justifyContent: 'center', alignItems: 'flex-start'}}>
             {
               project.apps.map(app => <AppView key={`${project.title}_${app.name}`} app={app} />)
             }
