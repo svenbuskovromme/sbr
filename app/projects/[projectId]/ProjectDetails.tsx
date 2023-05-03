@@ -4,12 +4,15 @@ import { motion } from "framer-motion";
 import { FC, useState } from "react";
 import Button from "../../../components/Button";
 import NavButton from "../../../components/NavButton";
+import { useTheme } from "../../../redux/hooks";
 import { App, Project, Role } from "../types";
 
 const RoleView: FC<{role: Role}> = ({role}) => {
-  return <div style={{flexShrink: 0, display: 'flex', flexDirection: 'column', gap: 10, padding: 0, backgroundColor: 'rgba(255,255,255,0)'}}>
-    <div style={{fontSize: 18, fontWeight: '600'}}><span style={{color: 'rgb(180,180,180)'}}>Role</span> {role.title}</div>
-    <div style={{fontSize: 14, fontWeight: '400', color: 'rgb(180,180,180)', textTransform: 'capitalize'}}>{role.from} - {role.to}</div>
+  const theme = useTheme();
+
+  return <div style={{flexShrink: 0, display: 'flex', flexDirection: 'column', gap: 10, padding: 0}}>
+    <div style={{fontSize: 18, fontWeight: '600'}}><span style={{color: theme?.fontFaded}}>Role</span> {role.title}</div>
+    <div style={{fontSize: 14, fontWeight: '400', color: theme?.fontFaded, textTransform: 'capitalize'}}>{role.from} - {role.to}</div>
     <div style={{fontSize: 14, fontWeight: '300', whiteSpace: 'pre-line'}}>{role.description}</div>
   </div>
 }
@@ -34,13 +37,15 @@ const ProjectDetails: FC<{project: Project}> = ({project}) => {
   }
   
 const Circle: FC = () => {
-  return <div style={{flexShrink: 0, borderRadius: 10, width: 5, height: 5, backgroundColor: 'white'}} />
+  const theme = useTheme();
+  return <div style={{flexShrink: 0, borderRadius: 10, width: 5, height: 5, backgroundColor: theme?.fontFull}} />
 }
 
   const AppView: FC<{app: App}> = ({app}) => {
+    const theme = useTheme();
     const [showingFeatures, setShowingFeatures] = useState(false);
   
-    return <div style={{padding: 15, color:'white',backgroundColor: 'rgb(30,30,30)', display: 'flex', flexDirection: 'column', gap: 10}}>
+    return <div style={{padding: 15, color: theme?.fontFull, backgroundColor: theme?.boxColor, display: 'flex', flexDirection: 'column', gap: 10}}>
       <div style={{fontSize: 16, fontWeight: '600'}}>{app.name}</div>
       <div style={{whiteSpace: 'pre-line', fontWeight: '300', fontSize: 14, lineHeight: 1.3}}>{app.description}</div>
       <RoleView role={app.role} />

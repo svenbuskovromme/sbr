@@ -2,6 +2,7 @@ import { Provider } from "react-redux";
 import store from "../redux/store";
 import ReduxApp from "./ReduxApp";
 import './globals.css';
+import ThemeApp from "./ThemeApp";
 
 export const metadata = {
     title: 'Portfolio',
@@ -17,7 +18,9 @@ const RootLayout = ({
       <html lang="en">
         <body>
             <ReduxApp>
+            <ThemeApp>
                 {children}
+            </ThemeApp>
             </ReduxApp>
         </body>
       </html>
