@@ -8,7 +8,7 @@ export const projects: readonly Project[] = [
             from: 'sep 2021',
             to: 'feb 2023',
             title: 'CTO & Developer',
-            description: 'Starting out as CTO in Jungle was a heavy tech task, but later transitioned into a 50/50 product position, as it was clear the two go hand in hand. On the one hand, you can build anything on the tech side, but everything flows much better if product decisions are made in a tech "aware" context. \nOur team started out as roughly 10 people, and 3 towards the end of my employment.'
+            description: 'Starting out as CTO in Jungle was a heavy tech task, but later transitioned into a 50/50 product position, as it was clear the two go hand in hand. While you can build anything on the tech side, but everything flows much better if product decisions are made in a tech "aware" context. \nOur team started out as roughly 10 people, and 3 towards the end of my employment.'
         },
       apps: [
         {
@@ -36,7 +36,7 @@ export const projects: readonly Project[] = [
             from: 'sep 2021',
             to: 'feb 2023',
             title: 'Fullstack',
-            description: 'Tech wise the app was built solo, with help from designer Guillermo. We went through at least 4 iterations of this app, each very different from each other. The map was once built in Unity with shaders from scratch, embedded in a view through React native, for example',
+            description: 'Tech wise the app was built solo by me, with designs done separately. We went through at least 4 iterations of this app, each very different from each other. The map was once built in Unity with shaders from scratch, embedded in a view through React native, for example',
           },
         },
         {
@@ -58,7 +58,7 @@ export const projects: readonly Project[] = [
             from: 'oct 2022',
             to: 'dec 2022',
             title: 'Fullstack',
-            description: 'Again, built solo with the help of my trusted designer. This was a side hustle compared to the native app, built mainly to open us up to SEO as mentioned. So while it serves the purpose, it does not have the depth that I wanted for it.',
+            description: 'Again, tech built solo with the help of my trusted designer. This was a side hustle compared to the native app, built mainly to open us up to SEO as mentioned. So while it serves the purpose, it does not have the depth that I wanted for it.',
           },
         },
       ]
