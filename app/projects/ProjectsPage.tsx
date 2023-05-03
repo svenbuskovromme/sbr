@@ -5,6 +5,8 @@ import {AnimatePresence, motion} from 'framer-motion';
 // import { GetAppsDocument } from '../generated/types';
 import { FC, useEffect, useState } from 'react';
 import NavButton from '../../components/NavButton';
+import { RouteType } from 'next/dist/lib/load-custom-routes';
+import { UrlObject } from 'url';
 
 export type AppsParams = {}
 export type App = {
@@ -38,8 +40,8 @@ const AppView: FC<{index: number, app: App}> = ({index, app}) => {
     <div style={{fontSize: 22, fontWeight: '600'}}>{app.name}</div>
     <div style={{whiteSpace: 'pre-line', textAlign: 'center', lineHeight: 1.3}}>{app.description}</div>
     <div style={{display: 'flex', gap: 10}}>
-      {!!app.webUrl && <NavButton href={app.webUrl}>web</NavButton>}
-      {!!app.appStoreUrl && <NavButton href={app.appStoreUrl}>native</NavButton>}
+      {!!app.webUrl && <NavButton href={{href: app.webUrl}}>web</NavButton>}
+      {!!app.appStoreUrl && <NavButton href={{href: app.appStoreUrl}}>native</NavButton>}
     </div>
   </motion.div>
 }
