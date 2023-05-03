@@ -114,5 +114,31 @@ export const projects: readonly Project[] = [
           }
         },
       ]
+    },
+    {
+        title: 'Alpine Sled Style',
+        description: 'A canadian duo, that normally sells equipment for snowmobiles, has started a yearly competition between professional snowmobile riders. They each upload a 1-2m video, and let the people decide which one is best. The winner takes home a cash prize',
+        role: {
+            from: 'sep 2022',
+            to: 'dec 2022',
+            title: 'Developer',
+            description: 'Sled Style needed a person to prepare them for next competition, and I took up that task.',
+        },
+        apps: [{
+            name: 'Web',
+            description: 'Their website, where visitors would be funneled in from various social media channels, and allowed to watch/vote their favorite riders',
+            features: [
+                "Video player",
+                "Sign up - Google/Apple/Email",
+                "Vote system",
+                "Small webshop - simple redirect to main site",
+            ],
+            stack: {
+                database: 'postgresql',
+                backend: 'nextjs',
+                frontend: 'nextjs',
+            },
+            url: 'https://sledstyle.com'
+        }]
     }
   ];

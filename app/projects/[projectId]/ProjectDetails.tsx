@@ -19,7 +19,7 @@ const RoleView: FC<{role: Role}> = ({role}) => {
 
 const ProjectDetails: FC<{project: Project}> = ({project}) => {
     return <>
-      <div style={{display: 'flex', flexDirection: 'column', gap: 30, padding: 30}}>
+      <div style={{display: 'flex', flexDirection: 'column', gap: 30, padding: 30, minHeight: '100vh', paddingBottom: 130}}>
         <h1>{project.title}</h1>
         <div style={{whiteSpace: 'pre-line', lineHeight: 1.3}}>{project.description}</div>
         <RoleView role={project.role} />
@@ -48,7 +48,9 @@ const Circle: FC = () => {
     return <div style={{padding: 15, color: theme?.fontFull, backgroundColor: theme?.boxColor, display: 'flex', flexDirection: 'column', gap: 10}}>
       <div style={{fontSize: 16, fontWeight: '600'}}>{app.name}</div>
       <div style={{whiteSpace: 'pre-line', fontWeight: '300', fontSize: 14, lineHeight: 1.3}}>{app.description}</div>
-      <RoleView role={app.role} />
+      {
+        !!app.role && <RoleView role={app.role} />
+      }
       <div style={{display: 'flex', flexDirection: 'column', gap: 15}}>
         <div style={{display: 'flex', gap: 30, alignItems: 'center', justifyContent: 'space-between'}}>
           <Button onClick={() => setShowingFeatures(!showingFeatures)}>Features {showingFeatures ? '-' : '+'}</Button>

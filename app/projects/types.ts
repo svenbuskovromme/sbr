@@ -27,6 +27,6 @@ export type App = {
     description: string,
     stack: Stack,
     url?: string,
-    role: Role,
+    role?: Role,
     features: string[],
 }
