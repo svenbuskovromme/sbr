@@ -14,7 +14,7 @@ export type App = {
   appStoreUrl?: string
 }
 
-const AppsPage: NextPage<AppsParams> = () => {
+const ProjectsPage: NextPage<AppsParams> = () => {
   const apps: App[] = [
     {name: 'Jungle', 
     description: 'A product centered around food discovery. \n Find recommendations from culinary professionals',
@@ -44,4 +44,4 @@ const AppView: FC<{index: number, app: App}> = ({index, app}) => {
   </motion.div>
 }
 
-export default AppsPage;
+export default ProjectsPage;
