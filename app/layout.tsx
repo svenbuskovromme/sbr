@@ -4,11 +4,10 @@ import ReduxApp from "./ReduxApp";
 import './globals.css';
 
 export const metadata = {
-    title: 'Home',
-    description: 'Welcome to Next.js',
+    title: 'Portfolio',
+    description: 'Sven Buskov Romme',
 };
   
-
 const RootLayout = ({
     children,
   }: {
