@@ -5,6 +5,8 @@ import {motion} from 'framer-motion';
 import Image from 'next/image';
 import { createContext, FC, Fragment, PropsWithChildren, ReactElement, ReactNode, useCallback, useContext, useEffect, useState } from 'react';
 import NavButton from '../../components/NavButton';
+import Center from '../../components/Center';
+import Row from '../../components/Row';
 
 interface ICVContext {
   setSelectedType: (type: CVType) => void,
@@ -25,12 +27,10 @@ const CVIndex: NextPage = () => {
 
   return !!context ? 
       <CVContext.Provider value={context}>
-        <div style={{display: 'flex', flexDirection: 'column', gap: 20, flex: 1, height: '100vh', alignItems: 'center', justifyContent: 'center'}}>
-            <div style={{display: 'flex', gap: 20, padding: 20, justifyContent: 'center'}}>
-              <NavButton href='/cv/general'>General</NavButton>
-              <NavButton href='/cv/react'>React</NavButton>
-            </div>
-        </div>
+        <Center style={{flexDirection: 'row', gap: 20, flex: 1, height: '100%'}}>
+            <NavButton href='/cv/general'>General</NavButton>
+            <NavButton href='/cv/react'>React</NavButton>
+        </Center>
       </CVContext.Provider>
      : null;
 }

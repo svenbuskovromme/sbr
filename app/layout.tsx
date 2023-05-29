@@ -2,29 +2,30 @@ import { Provider } from "react-redux";
 import store from "../redux/store";
 import ReduxApp from "./ReduxApp";
 import './globals.css';
-import ThemeApp from "./ThemeApp";
+import RootLayout from "./RootLayout";
+import themeStyles from '../components/themeStyles.module.css';
 
 export const metadata = {
     title: 'Portfolio',
     description: 'Sven Buskov Romme',
 };
   
-const RootLayout = ({
+const Component = ({
     children,
   }: {
     children: React.ReactNode;
   }) => {
     return (
       <html lang="en">
-        <body>
+        <body className={themeStyles.root} >
             <ReduxApp>
-            <ThemeApp>
+            <RootLayout>
                 {children}
-            </ThemeApp>
+            </RootLayout>
             </ReduxApp>
         </body>
       </html>
     );
 }
 
-export default RootLayout;
+export default Component;

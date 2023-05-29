@@ -1,0 +1,21 @@
+.root {
+    background-color: var(--background-color);
+    color: var(--font-color-full)
+}
+
+.box {
+    color: var(--font-color-full); 
+    background-color: var(--box-color);
+}
+
+.button {
+    background-color: var(--button-color);
+}
+
+.textFaded {
+    color: var(--font-color-faded);
+}
+
+.textFull {
+    color: var(--font-color-full);
+}

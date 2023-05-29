@@ -4,4 +4,5 @@ export type theme = {
     buttonColor: string,
     fontFull: string,
     fontFaded: string,
+    mode?: 'dark'|'light'
 }

@@ -1,6 +1,5 @@
 html,
 body {
-  background-color: rgb(200,200,200);
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -16,11 +15,24 @@ a {
   box-sizing: border-box;
 }
 
+p, h1 {
+  all: unset;
+  display: block;
+}
+
+:root {
+  --background-color: rgb(200,200,200);
+  --box-color: rgb(170, 170, 170);
+  --font-color-full: rgb(20,20,20);
+  --font-color-faded: rgb(50,50,50);
+  --button-color: rgb(255,255,255);
+}
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    background-color: black;
+  :root {
+    --background-color: rgb(0,0,0);
+    --box-color: rgb(30, 30, 30);
+    --font-color-full: rgb(235,235,235);
+    --font-color-faded: rgb(160,160,160);
+    --button-color: rgb(29,41,66);
   }
 }

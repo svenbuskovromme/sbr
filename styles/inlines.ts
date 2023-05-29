@@ -4,6 +4,9 @@ const inline = {
     },
     colors: {
         darkblue: 'rgb(29, 41, 66)'
+    },
+    header: {
+        height: 80,
     }
 };
 

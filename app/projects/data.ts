@@ -30,7 +30,7 @@ export const projects: readonly Project[] = [
           stack: {
             database: 'postgresql',
             backend: 'nextjs',
-            frontend: 'reactnative',
+            frontend: 'react native',
           },
           role: {
             from: 'sep 2021',
