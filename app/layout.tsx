@@ -18,11 +18,9 @@ const Component = ({
     return (
       <html lang="en">
         <body className={themeStyles.root} >
-            <ReduxApp>
             <RootLayout>
-                {children}
+              {children}
             </RootLayout>
-            </ReduxApp>
         </body>
       </html>
     );
