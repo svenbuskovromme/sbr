@@ -1,12 +1,6 @@
 'use client';
 
-import type { GetServerSideProps, GetStaticProps, NextPage } from 'next'
-import {AnimatePresence, motion} from 'framer-motion';
-// import { GetAppsDocument } from '../generated/types';
-import { FC, useEffect, useState } from 'react';
-import NavButton from '../../components/NavButton';
-import { RouteType } from 'next/dist/lib/load-custom-routes';
-import { UrlObject } from 'url';
+import { FC } from 'react';
 import { Project } from './types';
 import { projects } from './data';
 import Link from 'next/link';
@@ -16,9 +10,18 @@ import Gap from '../../components/Gap';
 import Column from '../../components/Column';
 import AutoGrid from '../../components/AutoGrid';
 
-export type AppsParams = {}
+const ProjectGridView: FC<{project: Project}> = ({project}) => {
+  return <Link href={`/projects/${project.title.toLowerCase()}`}>
+    <Box>
+      <div style={{display: 'flex', flexDirection: 'column', gap: 15, padding: 20}}>
+        <div>{project.title}</div>
+        <div style={{fontSize: 14, fontWeight: '300', lineHeight: 1.5}}>{project.description}</div>
+      </div>
+    </Box>
+  </Link>
+}
 
-const ProjectsPage: NextPage<AppsParams> = () => {
+export default function ProjectsPage(){
   return (
     <>
     <Column style={{padding: 30, flex: 1}}>
@@ -47,17 +50,4 @@ const ProjectsPage: NextPage<AppsParams> = () => {
     </Column>
     </>
   )
-}
-
-const ProjectGridView: FC<{project: Project}> = ({project}) => {
-  return <Link href={`/projects/${project.title.toLowerCase()}`}>
-    <Box>
-      <div style={{display: 'flex', flexDirection: 'column', gap: 15, padding: 20}}>
-        <div>{project.title}</div>
-        <div style={{fontSize: 14, fontWeight: '300', lineHeight: 1.5}}>{project.description}</div>
-      </div>
-    </Box>
-  </Link>
-}
-
-export default ProjectsPage;
+};

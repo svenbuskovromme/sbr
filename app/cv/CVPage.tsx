@@ -17,7 +17,7 @@ const CVContext = createContext({} as ICVContext);
 
 type CVType = 'react' | 'generic';
 
-const CVIndex: NextPage = () => {
+const CVIndex: FC = () => {
   const [context, setContext] = useState<ICVContext>();
   const [selectedType, setSelectedType] = useState<CVType>();
 
