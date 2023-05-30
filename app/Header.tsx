@@ -1,11 +1,8 @@
-'use client';
-
 import Link from "next/link";
-import { FC } from "react";
 import Text from "../components/Text";
 import inline from "../styles/inlines";
 
-const Component: FC = () => {
+export default function Component(){
     return <div style={{height: inline.header.height, backdropFilter: 'blur(8px)', padding: 30, gap: 30, flexWrap: 'wrap-reverse', justifyContent: 'flex-end', width: '100dvw', position: 'fixed', display: 'flex', alignItems: 'center'}}>
         <div style={{display: 'flex', alignItems: 'center', gap: 30, flexWrap: 'wrap'}}>
             {/* <Link href={'/services'}>Services</Link> */}
@@ -18,5 +15,3 @@ const Component: FC = () => {
         </Link>
     </div>
 };
-
-export default Component;
