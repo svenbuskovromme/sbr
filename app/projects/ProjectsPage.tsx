@@ -41,12 +41,6 @@ export default function ProjectsPage(){
       >
         {projects.map(project => <ProjectGridView key={project.title} project={project} />)}
       </AutoGrid>
-      {/* <div 
-        style={{gap: 30, gridAutoFlow: 'row', display: 'grid', gridTemplateColumns: 'repeat( auto-fill, minmax(250px, 1fr) )', justifyContent: 'center', alignItems: 'flex-start', width: '100%'}}>
-        {
-          projects.map(project => <ProjectGridView key={project.title} project={project} />)
-        }
-      </div> */}
     </Column>
     </>
   )
