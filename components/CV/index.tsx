@@ -158,10 +158,8 @@ const CVCard: FC<PropsWithChildren<{title: ReactElement}>> = ({title, children})
         <div>+4521674110</div>
         <div>Web</div>
         <div>
-          <a href={'https://jungleapp.co'}>Jungle Web</a>
+          <a href={'https://svenbuskovromme.com/projects'}>https://svenbuskovromme.com</a>
         </div>
-        <div>Apps</div>
-        <div>Jungle (<a href={'https://apps.apple.com/app/apple-store/id1574546669'}>iOS</a> &amp; <a href={'https://play.google.com/store/apps/details?id=com.jungleworld'}>android</a>)</div>
       </div>
     </div>
   }
