@@ -158,7 +158,7 @@ const CVCard: FC<PropsWithChildren<{title: ReactElement}>> = ({title, children})
         <div>+4521674110</div>
         <div>Web</div>
         <div>
-          <a href={'https://svenbuskovromme.com/projects'}>https://svenbuskovromme.com</a>
+          <a href={'https://svenbuskovromme.com/projects'}>https://svenbuskovromme.com (wip)</a>
         </div>
       </div>
     </div>
