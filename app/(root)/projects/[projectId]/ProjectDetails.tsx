@@ -26,11 +26,11 @@ const StackView: FC<{stack: Stack}> = ({stack}) => {
 
 const ProjectDetails: FC<{project: Project}> = ({project}) => {
     return <>
-      <div style={{display: 'flex', marginLeft: 'min(max(calc(100dvw - 900px) / 2, 0px), max(100px))', maxWidth: 900, flexDirection: 'column', gap: 30, padding: 30, minHeight: '100vh', paddingBottom: 130}}>
+      <div style={{display: 'flex', marginLeft: 'min(max(calc(100dvw - 900px) / 2, 0px), max(100px))', maxWidth: 900, flexDirection: 'column', gap: 30, padding: 30, minHeight: '100vh'}}>
         <Text.Header>{project.title}</Text.Header>
         <div style={{whiteSpace: 'pre-line', lineHeight: 1.3}}>{project.description}</div>
         <RoleView role={project.role} />
-        <div style={{display: 'flex', flexDirection: 'column', gap: 15}}>
+        <div style={{display: 'flex', flexDirection: 'column', gap: 15, paddingBottom: '130px'}}>
           <div>Apps / Products</div>
           <div 
             style={{overflowY: 'auto', gap: 30, gridAutoFlow: 'row', display: 'grid', gridTemplateColumns: 'repeat( auto-fill, minmax(350px, 1fr) )', justifyContent: 'center', alignItems: 'flex-start'}}>

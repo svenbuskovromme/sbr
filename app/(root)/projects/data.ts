@@ -140,5 +140,29 @@ export const projects: readonly Project[] = [
             },
             url: 'https://sledstyle.com'
         }]
-    }
+    },
+    {
+      title: 'Filify',
+      description: 'An affiliate platform, serving as middlemen between brands and a large database of influencers',
+      role: {
+          from: 'mar 2023',
+          to: 'may 2023',
+          title: 'CTO & Developer',
+          description: 'Filify needed a CTO and full-time developer to manage their team of three existing developers. I took up that task, setting up a scrum environment, while simultaneously working hands-on as well. The role also included client meetings, to handle affiliate tracking and microservice integrations.',
+      },
+      apps: [{
+          name: 'Web',
+          description: 'Maintaining and building new features on their website was the main development task',
+          features: [
+              'Influencer sign up and campaigns',
+              'Dashboards to track campaign performance and more'
+          ],
+          stack: {
+              database: 'firebase',
+              backend: 'graphql/rust',
+              frontend: 'nextjs',
+          },
+          url: 'https://filify.app'
+      }]
+  }
   ];

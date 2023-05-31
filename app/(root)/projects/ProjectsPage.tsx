@@ -11,8 +11,8 @@ import Column from '../../../components/Column';
 import AutoGrid from '../../../components/AutoGrid';
 
 const ProjectGridView: FC<{project: Project}> = ({project}) => {
-  return <Link href={`/projects/${project.title.toLowerCase()}`}>
-    <Box>
+  return <Link style={{height: '100%'}} href={`/projects/${project.title.toLowerCase()}`}>
+    <Box style={{height: '100%'}}>
       <div style={{display: 'flex', flexDirection: 'column', gap: 15, padding: 20}}>
         <div>{project.title}</div>
         <div style={{fontSize: 14, fontWeight: '300', lineHeight: 1.5}}>{project.description}</div>
@@ -34,6 +34,7 @@ export default function ProjectsPage(){
         min={'250px'}
         style={{
           gap: 30, 
+          gridAutoFlow: 'dense',
           justifyContent: 'center', 
           alignItems: 'flex-start', 
           width: '100%'
