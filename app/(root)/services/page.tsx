@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { FC, PropsWithChildren } from "react";
-import AutoGrid from "../../components/AutoGrid";
-import Box from "../../components/Box";
-import Center from "../../components/Center";
-import Column from "../../components/Column";
-import Row from "../../components/Row";
-import Text from '../../components/Text';
+import AutoGrid from "../../../components/AutoGrid";
+import Box from "../../../components/Box";
+import Center from "../../../components/Center";
+import Column from "../../../components/Column";
+import Row from "../../../components/Row";
+import Text from '../../../components/Text';
 
 const BoxCard: FC<PropsWithChildren> = ({children}) => {
     return <Box style={{flex: 1, height: '100%'}}>

@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import { FC, useState } from "react";
-import Box from "../../../components/Box";
-import Button from "../../../components/Button";
-import Text from "../../../components/Text";
-import NavButton from "../../../components/NavButton";
+import Box from "../../../../components/Box";
+import Button from "../../../../components/Button";
+import Text from "../../../../components/Text";
+import NavButton from "../../../../components/NavButton";
 import { App, Project, Role, Stack } from "../types";
 
 const RoleView: FC<{role: Role}> = ({role}) => {

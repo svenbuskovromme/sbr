@@ -4,9 +4,9 @@ import type { NextPage } from 'next'
 import {motion} from 'framer-motion';
 import Image from 'next/image';
 import { createContext, FC, Fragment, PropsWithChildren, ReactElement, ReactNode, useCallback, useContext, useEffect, useState } from 'react';
-import NavButton from '../../components/NavButton';
-import Center from '../../components/Center';
-import Row from '../../components/Row';
+import NavButton from '../../../components/NavButton';
+import Center from '../../../components/Center';
+import Row from '../../../components/Row';
 
 interface ICVContext {
   setSelectedType: (type: CVType) => void,

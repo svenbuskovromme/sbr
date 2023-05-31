@@ -1,6 +1,6 @@
-import './globals.css';
+import '../globals.css';
 import RootLayout from "./RootLayout";
-import themeStyles from '../components/themeStyles.module.css';
+import themeStyles from '../../components/themeStyles.module.css';
 
 export const metadata = {
     title: 'Portfolio',

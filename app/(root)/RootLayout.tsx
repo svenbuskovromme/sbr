@@ -1,7 +1,6 @@
 import { FC, PropsWithChildren } from "react";
 import Header from "./Header";
-import themeStyles from '../components/themeStyles.module.css';
-import inline from "../styles/inlines";
+import inline from "../../styles/inlines";
 
 const Component: FC<PropsWithChildren> = ({children}) => {
     return <>

@@ -2,7 +2,7 @@
 
 import { NextPage } from "next"
 import { FC } from "react"
-import CV, { GenericHeader, GenericHistory, GenericPersonal, GenericProfile, Skill } from "../../../components/CV"
+import CV, { GenericHeader, GenericHistory, GenericPersonal, GenericProfile, Skill } from "../../../../components/CV"
 
 const ReactSkills: FC = () => {
     return <div className='skills-container-wrap'>
@@ -58,6 +58,7 @@ const ReactSkills: FC = () => {
             <div className='skill-list-item'>c</div>
             <div className='skill-list-item'>c++</div>
             <div className='skill-list-item'>obj-c</div>
+            <div className='skill-list-item'>Scrum</div>
           </div>
           
       </div>

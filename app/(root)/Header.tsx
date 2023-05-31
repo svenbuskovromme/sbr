@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Text from "../components/Text";
-import inline from "../styles/inlines";
+import Text from "../../components/Text";
+import inline from "../../styles/inlines";
 
 export default function Component(){
     return <div style={{height: inline.header.height, backdropFilter: 'blur(8px)', padding: 30, gap: 30, flexWrap: 'wrap-reverse', justifyContent: 'flex-end', width: '100dvw', position: 'fixed', display: 'flex', alignItems: 'center'}}>

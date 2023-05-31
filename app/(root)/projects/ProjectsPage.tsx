@@ -4,11 +4,11 @@ import { FC } from 'react';
 import { Project } from './types';
 import { projects } from './data';
 import Link from 'next/link';
-import Box from '../../components/Box';
-import Text from '../../components/Text';
-import Gap from '../../components/Gap';
-import Column from '../../components/Column';
-import AutoGrid from '../../components/AutoGrid';
+import Box from '../../../components/Box';
+import Text from '../../../components/Text';
+import Gap from '../../../components/Gap';
+import Column from '../../../components/Column';
+import AutoGrid from '../../../components/AutoGrid';
 
 const ProjectGridView: FC<{project: Project}> = ({project}) => {
   return <Link href={`/projects/${project.title.toLowerCase()}`}>

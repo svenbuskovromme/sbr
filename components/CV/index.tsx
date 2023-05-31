@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FC, PropsWithChildren, ReactElement } from "react";
 import Image from 'next/image';
+import themeStyles from '../themeStyles.module.css';
 
 const CVCard: FC<PropsWithChildren<{title: ReactElement}>> = ({title, children}) => {
     return <motion.div className='cv-card'>
@@ -38,7 +39,7 @@ const CVCard: FC<PropsWithChildren<{title: ReactElement}>> = ({title, children})
                 flex-direction: column;
                 width: 800px;
                 aspect-ratio: 1/1.41;
-                gap:100px;
+                gap:70px;
                 padding:60px;
               }
   
@@ -57,9 +58,8 @@ const CVCard: FC<PropsWithChildren<{title: ReactElement}>> = ({title, children})
                 flex: 1;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
-                gap: 60px;
-                margin-bottom:60px;
+                grid-template-rows: auto auto;
+                gap: 40px;
               }
   
               .cv-card{
@@ -104,15 +104,15 @@ const CVCard: FC<PropsWithChildren<{title: ReactElement}>> = ({title, children})
   
  export const GenericHistory: FC = () => {
     return <div className='generic-card-container'>
-      <HistoryEntry from={'2021'} to={'Now'} label={`CTO and co-owner of Jungle`} />
-      <HistoryEntry from={'2017'} to={'2021'} label={'Developer in HallerupNet'} />
-      <HistoryEntry from={'2016'} to={'2017'} label={'2-man startup (self taught coding)'} />
+      <HistoryEntry from={'2023'} to={'2023'} label={`CTO in Filify`} />
+      <HistoryEntry from={'2021'} to={'2023'} label={`CTO and co-owner of Jungle`} />
+      <HistoryEntry from={'2017'} to={'2021'} label={'Fullstack Developer in HallerupNet'} />
       <HistoryEntry from={'2010'} to={'2015'} label={'MSc Civ. Engineer in Nanobiotech.'} />
     </div>
   }
   
   export const GenericHeader: FC = () => {
-    return <div className='header-container'>
+    return <div className={`header-container`}>
       <style global jsx>{`
         .header-container{
           display: flex;
@@ -167,19 +167,19 @@ const CVCard: FC<PropsWithChildren<{title: ReactElement}>> = ({title, children})
  export const GenericProfile: FC = () => {
     return <div className='generic-card-container'>
       <div>
-      After graduation, I started a startup project with a friend, and taught myself coding in the process. It&apos;s on pause, but the experience was
-      invaluable.
+      After graduation, I made a small startup project with a friend, and taught myself coding in the process. 
       </div>
       <div>
-    In my first professional job, my
+      This lead
+      to my first professional job, where my
     profile was given structure, and I found a
     drive towards working in a team.
       </div>
       <div>
-      After a year in Jungle (and counting), 
-      I&apos;ve proven I can build a <b>stable, performant stack</b> of my own to support thousands of daily users with a complex backend and <b>headless CMS</b>. 
-      Product wise, I&apos;ve become data-driven and pragmatic. 
+      After a year and a half in Jungle, 
+      I&apos;ve proven I can build a <b>full, stable, performant stack</b> to support thousands of daily users with a complex backend and <b>headless CMS</b>.
       </div>
+      <div>Most recently in Filify, I put scrum on my resume, and set up a clean productive workflow for a team of four developers</div>
     </div>
   }
   
