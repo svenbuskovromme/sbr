@@ -11,7 +11,11 @@ COPY package*.json ./
 RUN npm install --production
 
 # Copy the rest of the application code
-COPY . .
+COPY app app 
+COPY components components 
+COPY public public 
+COPY styles styles
+COPY .eslintrc.json next.config.js tsconfig.json ./
 
 # Build the Next.js application
 RUN npm run build
